@@ -1,0 +1,15 @@
+    void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.tag == "Helicopter")
+        {
+            print("Trigger");
+            Invoke("YouWin", 1f);
+            print("Trigger working");
+        }
+    }
+
+    void YouWin()
+    {
+        print("Win!");
+        SceneManager.LoadScene("03a Win Screen");
+    }
